@@ -1,0 +1,531 @@
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <cstdlib>
+#include <time.h>
+#include <conio.h>
+#include "windows.h."
+using namespace std;
+
+int main()
+{
+	double flafel = 0.35;
+	double Potato = 0.75;
+	double zenger = 1.75;
+	/////////////////////////////////  
+	string sh = "shaorma";
+	string ch = "chickens";
+	string me = "meat";
+	/////////////////////////////////
+	double Italian_meal = 3.00;
+	double Mexican_meal = 3.50;
+	double Arabian_meal = 2.50;
+	/////////////////////////////////
+	double Fried_chicken = 2.75;
+	double Grilled_chicken = 2.50;
+	/////////////////////////////////
+	double Fire_Beef = 3.75;
+	double Fire_Ranch = 3.25;
+	double Gordon_Blue = 3.50;
+	/////////////////////////////////
+	double Milk_Chic_Chocolate = 2.50;
+	double pepsi = 0.50;
+	double sprite = 0.50;
+	double coca_cola = 0.50;
+	double fanta = 0.50;
+	double mirinda = 0.50;
+	////////////////////////////////
+	double hot_chocolate = 2.00;
+	double coffe = 2.00;
+	double tea = 1.00;
+	///////////////////////////////
+	double Oreo_Cake = 3.00;
+	double Crumble = 2.50;
+	double Strawberry_Cake = 3.00;
+	//////////////////////////////
+	double amount = 0;
+	double cash;
+	double many;
+	int color;
+	cout << "***********************************" << endl;
+	cout << "*    Welcome to RAMOSH resturent  *" << endl;
+	cout << "*      Thanks for choicing us     *" << endl;
+	cout << "*     We wish you ahappy trial    *" << endl;
+	cout << "*               ^_^               *" << endl;
+	cout << "***********************************" << endl;
+	Sleep(6000);
+	system("Cls");
+
+	cout << "Please select a color :" << endl;
+	cout << "[1]" << " " << "Green & Black" << endl;
+	cout << "[2]" << " " << "Green & Blue" << endl;
+	cout << "[3]" << " " << "Green & Red" << endl;
+	cout << "[4]" << " " << "Red & Blue" << endl;
+	cout << "[5]" << " " << "Red & White" << endl;
+loop0:
+	cin >> color;
+	if (color == 1)
+		system("color A0");
+	else if (color == 2)
+		system("color A1");
+	else if (color == 3)
+		system("color A4");
+	else if (color == 4)
+		system("color C5");
+	else if (color == 5)
+		system("color C7");
+	else
+	{
+		cout << "Sorry Inviled choice, please reenter your choice" << endl;
+		goto loop0;
+	}
+
+	system("Cls");
+
+	int x, y, z, w, v, d, c, h, m, s, ds;
+loop000:
+	cout << "Please enter your choice:" << endl;
+	cout << "For food please press [1]" << endl;
+	cout << "For drinks please press [2]" << endl;
+	cout << "For desserts please press [3]" << endl;
+	cout << endl;
+	cout << "*** To end the order please enter 100 ***" << endl;
+
+loop1:
+	{
+		cin >> x;
+		if (x != 1 && x != 2 && x != 3)
+		{
+			if (x == 100)
+				goto loop00;
+			else
+			{
+				cout << "Sorry Inviled choice, please reenter your choice" << endl;
+				goto loop1;
+			}
+		}
+	}
+	if (x == 1)
+	{
+
+		cout << "Good choice" << endl;
+		cout << "Do you prefer meal or santwich ? " << endl;
+		cout << "[1]" << " " << "Meal" << endl;
+		cout << "[2]" << " " << "Sandwich" << endl;
+		cout << endl;
+		cout << "*** To end the order please enter 100 ***" << endl;
+
+	loop2:
+		cin >> m;
+		if (m != 1 && m != 2)
+		{
+			if (m == 100)
+				goto loop00;
+			else
+			{
+				cout << "Sorry Inviled choice, please reenter your choice" << endl;
+				goto loop2;
+			}
+		}
+		if (m == 1)
+		{
+			cout << "[1]" << " " << sh << endl;
+			cout << "[2]" << " " << ch << endl;
+			cout << "[3]" << " " << me << endl;
+			cout << "please inter your choice:";
+			cout << endl;
+			cout << "*** To end the order please enter 100 ***" << endl;
+		loop3:
+			cin >> y;
+			if (y != 1 && y != 2 && y != 3)
+			{
+				if (y == 100)
+					goto loop00;
+				else
+				{
+					cout << "Sorry Inviled choice, please reenter your choice" << endl;
+					goto loop3;
+				}
+			}
+			if (y == 1)
+			{
+				cout << "[1]" << " " << "Italian meal= 3.00" << endl;
+				cout << "[2]" << " " << "Mexican meal= 3.50" << endl;
+				cout << "[3]" << " " << "Arabian meal= 2.50" << endl;
+				cout << "Wich meal you prefer?" << " ";
+				cout << endl;
+				cout << "*** To end the order please enter 100 ***" << endl;
+			loop6:
+				cin >> z;
+				if (z != 1 && z != 2 && z != 3)
+				{
+					if (z == 100)
+						goto loop00;
+					else
+					{
+						cout << "Sorry Inviled choice, please reenter your choice" << endl;
+						goto loop6;
+					}
+				}
+				else if (z == 1 || z == 2 || z == 3)
+				{
+					switch (z)
+					{
+					case 1:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Italian_meal * many);
+						break;
+
+					case 2:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Mexican_meal * many);
+						break;
+
+					case 3:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Arabian_meal * many);
+						break;
+					}
+				}
+
+			}
+			else if (y == 2)
+			{
+				cout << "[1]" << " " << "Fried chicken= 2.75" << endl;
+				cout << "[2]" << " " << "Grilled chicken =2.50" << endl;
+				cout << "Wich meal you prefer?" << " ";
+				cout << endl;
+				cout << "*** To end the order please enter 100 ***" << endl;
+			loop7:
+				cin >> w;
+				if (w != 1 && w != 2 && w != 3)
+				{
+					if (w == 100)
+						goto loop00;
+					else
+					{
+						cout << "Sorry Inviled choice, please reenter your choice" << endl;
+						goto loop7;
+					}
+				}
+				else if (w == 1 || w == 2)
+				{
+					switch (w)
+					{
+					case 1:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Fried_chicken * many);
+						break;
+
+					case 2:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Grilled_chicken * many);
+						break;
+
+					}
+				}
+
+
+			}
+			else if (y == 3)
+			{
+				cout << "[1]" << " " << "Fire Beef= 3.75" << endl;
+				cout << "[2]" << " " << "Fire Ranch= 3.25" << endl;
+				cout << "[3]" << " " << "Gordon Blue= 3.50" << endl;
+				cout << "Wich meal you prefer?" << " ";
+				cout << endl;
+				cout << "*** To end the order please enter 100 ***" << endl;
+			loop9:
+				cin >> v;
+				if (v != 1 && v != 2 && v != 3)
+				{
+					if (v == 100)
+						goto loop00;
+					else
+					{
+						cout << "Sorry Inviled choice, please reenter your choice" << endl;
+						goto loop9;
+					}
+				}
+				else if (v == 1 || v == 2 || v == 3)
+				{
+					switch (v)
+					{
+					case 1:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Fire_Beef * many);
+						break;
+
+					case 2:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Fire_Ranch * many);
+						break;
+
+					case 3:
+						cout << "How many ?" << " ";
+						cin >> many;
+						amount = amount + (Gordon_Blue * many);
+						break;
+					}
+				}
+
+			}
+		}
+		else if (m == 2)
+		{
+			cout << "[1]" << " " << "Flafel= 0.35" << endl;
+			cout << "[2]" << " " << "Potato= 0.75" << endl;
+			cout << "[3]" << " " << "Zenger= 1.75" << endl;
+			cout << "please enter your choice:";
+			cout << endl;
+			cout << "*** To end the order please enter 100 ***" << endl;
+		loop4:
+			cin >> s;
+			if (s != 1 && s != 2 && s != 3)
+			{
+				if (s == 100)
+					goto loop00;
+				else
+				{
+					cout << "Sorry Inviled choice, please reenter your choice" << endl;
+					goto loop4;
+				}
+			}
+			else if (s == 1)
+			{
+				cout << "How many ?" << " ";
+				cin >> many;
+				amount = amount + (flafel * many);
+			}
+
+			else if (s == 2)
+			{
+				cout << "How many ?" << " ";
+				cin >> many;
+				amount = amount + (Potato * many);
+			}
+
+			else if (s == 3)
+			{
+				cout << "How many ?" << " ";
+				cin >> many;
+				amount = amount + (zenger * many);
+			}
+		}
+		int end1;
+		cout << "if you want to order something else, Please press [1] " << endl;
+		cout << "*** To end the order please enter 100 ***" << endl;
+	loop12:
+		cin >> end1;
+		if (end1 == 1)
+			goto loop000;
+		else if (end1 == 100)
+			goto loop00;
+		else
+		{
+			cout << "Sorry Inviled choice, please reenter your choice" << endl;
+			goto loop12;
+		}
+	}
+
+	else if (x == 2)
+	{
+		cout << "Good choice" << endl;
+		cout << "please select a choice:" << " " << endl;
+		cout << "[1]" << " " << "Cold drink" << endl;
+		cout << "[2]" << " " << "Hot drink" << endl;
+		cout << endl;
+		cout << "*** To end the order please enter 100 ***" << endl;
+	loop8:
+		cin >> d;
+		if (d != 1 && d != 2)
+		{
+			if (d == 100)
+				goto loop00;
+			else
+			{
+				cout << "Sorry Inviled choice, please reenter your choice" << endl;
+				goto loop8;
+			}
+		}
+
+		else if (d == 1)
+		{
+			cout << "please select a choice:" << " " << endl;
+			cout << "[1]" << " " << "Milk Chic Chocolate= 2.50" << endl;
+			cout << "[2]" << " " << "pepsi= 0.50" << endl;
+			cout << "[3]" << " " << "sprite= 0.50" << endl;
+			cout << "[4]" << " " << "coca cola= 0.50" << endl;
+			cout << "[5]" << " " << "fanta= 0.50" << endl;
+			cout << "[6]" << " " << "mirinda= 0.50" << endl;
+			cout << endl;
+			cout << "*** To end the order please enter 100 ***" << endl;
+		loop10:
+			cin >> c;
+			if (c != 1 && c != 2 && c != 3 && c != 4 && c != 5 && c != 6)
+			{
+				if (c == 100)
+					goto loop00;
+				else
+				{
+					cout << "Sorry Inviled choice, please reenter your choice" << endl;
+					goto loop10;
+				}
+			}
+			else if (c == 1)
+			{
+				cout << "How many ?" << " ";
+				cin >> many;
+				amount = amount + (Milk_Chic_Chocolate * many);
+			}
+			else if (c == 2 || c == 3 || c == 4 || c == 5 || c == 6)
+			{
+				cout << "How many ?" << " ";
+				cin >> many;
+				amount = amount + (0.50 * many);
+			}
+
+
+		}
+		else if (d == 2)
+		{
+			cout << "please select a choice:" << " " << endl;
+			cout << "[1]" << " " << "Hot chocolate= 2.00" << endl;
+			cout << "[2]" << " " << "Coffe= 2.00" << endl;
+			cout << "[3]" << " " << "Tea= 1.00" << endl;
+			cout << endl;
+			cout << "*** To end the order please enter 100 ***" << endl;
+		loop11:
+			cin >> h;
+			if (h != 1 && h != 2 && h != 3)
+			{
+				if (h == 100)
+					goto loop00;
+				else
+				{
+					cout << "Sorry Inviled choice, please reenter your choice" << endl;
+					goto loop11;
+				}
+			}
+			else if (h == 1 || h == 2)
+			{
+				cout << "How many ?" << " ";
+				cin >> many;
+				amount = amount + (many * 2.00);
+			}
+			else if (h == 3)
+			{
+				cout << "How many ?" << " ";
+				cin >> many;
+				amount = amount + (many * 0.50);
+			}
+
+		}
+		int end2;
+		cout << "if you want to order something else, Please press [1] " << endl;
+		cout << "*** To end the order please enter 100 ***" << endl;
+	loop13:
+		cin >> end2;
+		if (end2 == 1)
+			goto loop000;
+		else if (end2 == 100)
+			goto loop00;
+		else
+		{
+			cout << "Sorry Inviled choice, please reenter your choice" << endl;
+			goto loop13;
+		}
+	}
+	else if (x == 3)
+	{
+		cout << "Good choice" << endl;
+		cout << "please select a choice:" << " " << endl;
+		cout << "[1]" << " " << "Oreo Cake= 3.00" << endl;
+		cout << "[2]" << " " << "Crumble= 2.50" << endl;
+		cout << "[3]" << " " << "Strawberry Cake= 3.00" << endl;
+		cout << endl;
+		cout << "*** To end the order please enter 100 ***" << endl;
+	loop22:
+		cin >> ds;
+		if (ds != 1 && ds != 2 && ds != 3)
+		{
+			if (ds == 100)
+				goto loop00;
+			else
+			{
+				cout << "Sorry Inviled choice, please reenter your choice" << endl;
+				goto loop22;
+			}
+		}
+		else if (ds == 1)
+		{
+			cout << "How many ?" << " ";
+			cin >> many;
+			amount = amount + (3.00 * many);
+		}
+		else if (ds == 2)
+		{
+			cout << "How many ?" << " ";
+			cin >> many;
+			amount = amount + (many * 2.50);
+		}
+		else if (ds == 3)
+		{
+			cout << "How many ?" << " ";
+			cin >> many;
+			amount = amount + (many * 3.00);
+		}
+		int end3;
+		cout << "if you want to order something else, Please press [1] " << endl;
+		cout << "*** To end the order please enter 100 ***" << endl;
+	loop14:
+		cin >> end3;
+		if (end3 == 1)
+			goto loop000;
+		else if (end3 == 100)
+			goto loop00;
+		else
+		{
+			cout << "Sorry Inviled choice, please reenter your choice" << endl;
+			goto loop14;
+		}
+
+	}
+
+loop00:
+	cout << "*******************************" << endl;
+	cout << "The amount is       = " << amount << endl;
+	cout << "Tax                 = " << 0.16 << endl;
+	cout << "The total amount is = " << (amount * 0.16) + amount << endl;
+	cout << "Your cash is        = ";
+loop33:
+	cin >> cash;
+	if (cash < ((amount * 0.16) + amount))
+	{
+		cout << "Sorry your cash isn't enough,please enter another cash:" << endl;
+		goto loop33;
+	}
+	cout << "Chang is            = " << cash - ((amount * 0.16) + amount) << endl;
+	cout << "*******************************" << endl;
+	cout << endl << endl;
+	Sleep(6000);
+	system("Cls");
+	cout << "^_^_^_^_^_^_^_^_^_^_^_^_^_^_^_^_^_^" << endl;
+	cout << "^         RAMOSH resturent        ^" << endl;
+	cout << "^      Thanks for choicing us     ^" << endl;
+	cout << "^        To contact with us       ^" << endl;
+	cout << "^          +962787090910          ^" << endl;
+	cout << "^               ^_^               ^" << endl;
+	cout << "^_^_^_^_^_^_^_^_^_^_^_^_^_^_^_^_^_^" << endl;
+	cout << endl << endl;
+
+	system("pause");
+	return 0;
+}
